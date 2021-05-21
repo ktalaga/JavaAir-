@@ -28,7 +28,8 @@ public class FlightTest {
     private CabinCrew cabinCrew_5;
     private ArrayList<CabinCrew> cabinCrew;
     private ArrayList<Passenger> passengers;
-    private Plane plane;
+    private Plane plane_1;
+    private Plane plane_2;
     private Passenger passenger_1;
     private Passenger passenger_2;
 
@@ -51,10 +52,11 @@ public class FlightTest {
         cabinCrew.add(cabinCrew_2);
         cabinCrew.add(cabinCrew_3);
         cabinCrew.add(cabinCrew_4);
-        plane = new Plane(PlaneType.BOEING747);
+        plane_1 = new Plane(PlaneType.BOEING747);
+        plane_2 = new Plane(PlaneType.AIRBUSA320);
         passenger_1 = new Passenger("Jimi Hendrix", 1);
         passenger_2 = new Passenger("Elton John", 2);
-        flight_1 = new Flight(pilots, cabinCrew, plane, "ABZ65892", "Aberdeen", "Edinburgh", "14:55");
+        flight_1 = new Flight(pilots, cabinCrew, plane_1, "ABZ65892", "Aberdeen", "Edinburgh", "14:55");
     }
 
     @Test
@@ -114,5 +116,21 @@ public class FlightTest {
         flight_1.addPassengerToFlight(passenger_2);
         flight_1.removeAllPassengersIfFlightCancelled();
         assertEquals(0, flight_1.getPassengersCount());
+    }
+
+    @Test
+    public void canGetPlane() {
+        assertEquals(PlaneType.BOEING747, flight_1.getPlane().getPlaneType());
+    }
+
+    @Test
+    public void canChangePlane() {
+        flight_1.setPlane(plane_2);
+        assertEquals(PlaneType.AIRBUSA320, flight_1.getPlane().getPlaneType());
+    }
+
+    @Test
+    public void canGetFlightNumber() {
+        assertEquals("ABZ65892", flight_1.getFlightNumber());
     }
 }
