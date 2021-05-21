@@ -25,4 +25,10 @@ public class PilotTest {
         assertEquals("Ozzy Osbourne", pilot_1.getName());
     }
 
+    @Test
+    public void pilotHasRank(){
+        assertEquals(Rank.CAPITAN, pilot_1.getRank());
+        assertEquals(Rank.FIRST_OFFICER, pilot_2.getRank());
+    }
+
 }
