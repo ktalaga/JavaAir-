@@ -14,4 +14,8 @@ public class CabinCrew extends Person{
     public void setRank(Rank rank) {
         this.rank = rank;
     }
+
+    public String relayMessageToPassengers(){
+        return "Please fasten your seatbelts";
+    }
 }
