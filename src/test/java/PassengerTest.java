@@ -31,4 +31,10 @@ public class PassengerTest {
         passenger_1.setName("Tyson Fury");
         assertEquals("Tyson Fury", passenger_1.getName());
     }
+
+    @Test
+    public void canChangeNumberOfBags() {
+        passenger_1.setNumberOfBags(3);
+        assertEquals(3, passenger_1.getNumberOfBags());
+    }
 }
