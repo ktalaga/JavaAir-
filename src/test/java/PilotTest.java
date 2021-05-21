@@ -19,4 +19,10 @@ public class PilotTest {
         assertEquals("Bruce Dickinson", pilot_1.getName());
     }
 
+    @Test
+    public void canChangePilotName(){
+        pilot_1.setName("Ozzy Osbourne");
+        assertEquals("Ozzy Osbourne", pilot_1.getName());
+    }
+
 }
