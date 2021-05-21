@@ -25,4 +25,13 @@ public class PlaneTest {
         assertEquals(PlaneType.DREAMLINER, plane_3.getPlaneType());
     }
 
+    @Test
+    public void planeHasWeight(){
+        assertEquals("41000", plane_1.getPlaneWeight());
+    }
+
+    @Test
+    public void planeHasCapacity() {
+        assertEquals(230, plane_1.getPlaneCapacity();
+    }
 }
