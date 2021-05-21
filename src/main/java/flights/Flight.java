@@ -103,7 +103,9 @@ public class Flight {
     }
 
     public void addPassengerToFlight(Passenger passenger){
-        passengers.add(passenger);
+        if(plane.getPlaneCapacity() > this.getPassengersCount()){
+            passengers.add(passenger);
+        }
     }
 
     public void removePassengerFromFlight(Passenger passenger){

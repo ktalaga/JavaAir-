@@ -17,6 +17,7 @@ import static org.junit.Assert.assertEquals;
 public class FlightTest {
 
     private Flight flight_1;
+    private Flight flight_2;
     private Pilot pilot_1;
     private Pilot pilot_2;
     private Pilot pilot_3;
@@ -53,10 +54,11 @@ public class FlightTest {
         cabinCrew.add(cabinCrew_3);
         cabinCrew.add(cabinCrew_4);
         plane_1 = new Plane(PlaneType.BOEING747);
-        plane_2 = new Plane(PlaneType.AIRBUSA320);
+        plane_2 = new Plane(PlaneType.TESTER);
         passenger_1 = new Passenger("Jimi Hendrix", 1);
         passenger_2 = new Passenger("Elton John", 2);
         flight_1 = new Flight(pilots, cabinCrew, plane_1, "ABZ65892", "Aberdeen", "Edinburgh", "14:55");
+        flight_2 = new Flight(pilots, cabinCrew, plane_2, "ABZ65892", "Aberdeen", "Edinburgh", "14:55");
     }
 
     @Test
@@ -125,8 +127,8 @@ public class FlightTest {
 
     @Test
     public void canChangePlane() {
-        flight_1.setPlane(plane_2);
-        assertEquals(PlaneType.AIRBUSA320, flight_1.getPlane().getPlaneType());
+        flight_1.setPlane(plane_1);
+        assertEquals(PlaneType.BOEING747, flight_1.getPlane().getPlaneType());
     }
 
     @Test
@@ -179,4 +181,12 @@ public class FlightTest {
         flight_1.addPassengerToFlight(passenger_2);
         assertEquals(228, flight_1.getNumberOfAvailableSeats());
     }
+
+    @Test
+    public void canRefuseToAddPassengerIfPlaneFull() {
+        flight_2.addPassengerToFlight(passenger_1);
+        flight_2.addPassengerToFlight(passenger_2);
+        assertEquals(1, flight_2.getPassengersCount());
+    }
+
 }
