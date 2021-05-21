@@ -133,4 +133,43 @@ public class FlightTest {
     public void canGetFlightNumber() {
         assertEquals("ABZ65892", flight_1.getFlightNumber());
     }
+
+    @Test
+    public void canChangeFlightNumber() {
+        flight_1.setFlightNumber("Testing");
+        assertEquals("Testing", flight_1.getFlightNumber());
+    }
+
+    @Test
+    public void canGetDestination() {
+        assertEquals("Aberdeen", flight_1.getDestination());
+    }
+
+    @Test
+    public void canChangeDestination() {
+        flight_1.setDestination("Warsaw");
+        assertEquals("Warsaw", flight_1.getDestination());
+    }
+
+    @Test
+    public void canGetDepartureAirport() {
+        assertEquals("Edinburgh", flight_1.getDepartureAirport());
+    }
+
+    @Test
+    public void canChangeDepartureAirport() {
+        flight_1.setDepartureAirport("London");
+        assertEquals("London", flight_1.getDepartureAirport());
+    }
+
+    @Test
+    public void canGetDepartureTime() {
+        assertEquals("14:55", flight_1.getDepartureTime());
+    }
+
+    @Test
+    public void canChangeDepartureTime() {
+        flight_1.setDepartureTime("21:37");
+        assertEquals("21:37", flight_1.getDepartureTime());
+    }
 }
