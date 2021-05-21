@@ -172,4 +172,11 @@ public class FlightTest {
         flight_1.setDepartureTime("21:37");
         assertEquals("21:37", flight_1.getDepartureTime());
     }
+
+    @Test
+    public void canReturnANumberOfAvailableSeats() {
+        flight_1.addPassengerToFlight(passenger_1);
+        flight_1.addPassengerToFlight(passenger_2);
+        assertEquals(228, flight_1.getNumberOfAvailableSeats());
+    }
 }

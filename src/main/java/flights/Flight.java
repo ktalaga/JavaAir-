@@ -114,4 +114,7 @@ public class Flight {
         passengers.clear();
     }
 
+    public int getNumberOfAvailableSeats() {
+        return plane.getPlaneCapacity() - this.getPassengersCount();
+    }
 }
