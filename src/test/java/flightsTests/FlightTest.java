@@ -19,6 +19,7 @@ public class FlightTest {
     private Flight flight_1;
     private Pilot pilot_1;
     private Pilot pilot_2;
+    private Pilot pilot_3;
     private ArrayList<Pilot> pilots;
     private CabinCrew cabinCrew_1;
     private CabinCrew cabinCrew_2;
@@ -33,6 +34,7 @@ public class FlightTest {
     public void before(){
         pilot_1 = new Pilot("Bruce Dickinson", Rank.CAPITAN, "BB674985X");
         pilot_2 = new Pilot("Bob Marley", Rank.FIRST_OFFICER, "AD667453U");
+        pilot_3 = new Pilot("Evander Holyfield", Rank.FIRST_OFFICER, "GD367983J");
         pilots = new ArrayList<>();
         pilots.add(pilot_1);
         pilots.add(pilot_2);
@@ -52,6 +54,12 @@ public class FlightTest {
     @Test
     public void flightHasPilots(){
         assertEquals(2, flight_1.getNumberOfPilots());
+    }
+
+    @Test
+    public void canAddPilotToPilots(){
+        flight_1.addPilotToPilotsOnThisFlight(pilot_3);
+        assertEquals(3, flight_1.getNumberOfPilots());
     }
 
 }

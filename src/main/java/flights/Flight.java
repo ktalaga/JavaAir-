@@ -34,7 +34,7 @@ public class Flight {
         return this.pilots.size();
     }
 
-    public void addPilotToPilotsOnThisFlight(){
+    public void addPilotToPilotsOnThisFlight(Pilot pilot){
         pilots.add(pilot);
     }
 
