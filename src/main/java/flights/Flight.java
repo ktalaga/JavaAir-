@@ -38,6 +38,10 @@ public class Flight {
         pilots.add(pilot);
     }
 
+    public void deletePilotFromPilotsOnThisFlight(Pilot pilot){
+        pilots.remove(pilot);
+    }
+
     public ArrayList<CabinCrew> getCabinCrew() {
         return cabinCrew;
     }

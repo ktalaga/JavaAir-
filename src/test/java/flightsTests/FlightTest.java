@@ -62,4 +62,10 @@ public class FlightTest {
         assertEquals(3, flight_1.getNumberOfPilots());
     }
 
+    @Test
+    public void canDeleteParticularPilotFromThisFlight(){
+        flight_1.deletePilotFromPilotsOnThisFlight(pilot_1);
+        assertEquals(1, flight_1.getNumberOfPilots());
+    }
+
 }
