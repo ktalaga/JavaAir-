@@ -36,4 +36,9 @@ public class PilotTest {
         pilot_2.setRank(Rank.CAPITAN);
         assertEquals(Rank.CAPITAN, pilot_2.getRank());
     }
+
+    @Test
+    public void pilotHasLicenseNumber() {
+        assertEquals("BB674985X", pilot_1.getLicenseNumber());
+    }
 }
