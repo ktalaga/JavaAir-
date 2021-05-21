@@ -54,8 +54,8 @@ public class Flight {
         cabinCrew.remove(cabinCrewMember);
     }
 
-    public ArrayList<Passenger> getPassengers() {
-        return passengers;
+    public int getPassengersCount() {
+        return passengers.size();
     }
 
     public void setPassengers(ArrayList<Passenger> passengers) {
@@ -101,4 +101,17 @@ public class Flight {
     public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
     }
+
+    public void addPassengerToFlight(Passenger passenger){
+        passengers.add(passenger);
+    }
+
+    public void removePassengerFromFlight(Passenger passenger){
+        passengers.remove(passenger);
+    }
+
+    public void removeAllPassengersIfFlightCancelled(){
+        passengers.clear();
+    }
+
 }
