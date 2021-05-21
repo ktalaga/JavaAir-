@@ -81,4 +81,10 @@ public class FlightTest {
         assertEquals(5, flight_1.getNumberOfCabinCrew());
     }
 
+    @Test
+    public void canDeleteParticularCabinCrewMemberFromThisFlight(){
+        flight_1.deleteCabinCrewMemberFromCabinCrewOnThisFlight(cabinCrew_5);
+        assertEquals(4, flight_1.getNumberOfCabinCrew());
+    }
+
 }

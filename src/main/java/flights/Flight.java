@@ -50,6 +50,10 @@ public class Flight {
         this.cabinCrew.add(cabinCrewMember);
     }
 
+    public void deleteCabinCrewMemberFromCabinCrewOnThisFlight(CabinCrew cabinCrewMember){
+        cabinCrew.remove(cabinCrewMember);
+    }
+
     public ArrayList<Passenger> getPassengers() {
         return passengers;
     }
