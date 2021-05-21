@@ -42,12 +42,12 @@ public class Flight {
         pilots.remove(pilot);
     }
 
-    public ArrayList<CabinCrew> getCabinCrew() {
-        return cabinCrew;
+    public int getNumberOfCabinCrew() {
+        return cabinCrew.size();
     }
 
-    public void setCabinCrew(ArrayList<CabinCrew> cabinCrew) {
-        this.cabinCrew = cabinCrew;
+    public void addCabinCrewMemberToCabinCrewOnThisFlight(CabinCrew cabinCrewMember) {
+        this.cabinCrew.add(cabinCrewMember);
     }
 
     public ArrayList<Passenger> getPassengers() {

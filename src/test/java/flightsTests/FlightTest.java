@@ -25,6 +25,7 @@ public class FlightTest {
     private CabinCrew cabinCrew_2;
     private CabinCrew cabinCrew_3;
     private CabinCrew cabinCrew_4;
+    private CabinCrew cabinCrew_5;
     private ArrayList<CabinCrew> cabinCrew;
     private ArrayList<Passenger> passengers;
     private Plane plane;
@@ -42,6 +43,7 @@ public class FlightTest {
         cabinCrew_2 = new CabinCrew("Lennox Lewis", Rank.FLIGHT_ATTENDANT);
         cabinCrew_3 = new CabinCrew("Jon Jones", Rank.FLIGHT_ATTENDANT);
         cabinCrew_4 = new CabinCrew("Jan Blachowicz", Rank.FLIGHT_ATTENDANT);
+        cabinCrew_5 = new CabinCrew("Emma Watson", Rank.FLIGHT_ATTENDANT);
         cabinCrew = new ArrayList<>();
         cabinCrew.add(cabinCrew_1);
         cabinCrew.add(cabinCrew_2);
@@ -66,6 +68,17 @@ public class FlightTest {
     public void canDeleteParticularPilotFromThisFlight(){
         flight_1.deletePilotFromPilotsOnThisFlight(pilot_1);
         assertEquals(1, flight_1.getNumberOfPilots());
+    }
+
+    @Test
+    public void flightHasCabinCrew(){
+        assertEquals(4, flight_1.getNumberOfCabinCrew());
+    }
+
+    @Test
+    public void canAddCabinCrewMemberToCabinCrewOnThisFlight(){
+        flight_1.addCabinCrewMemberToCabinCrewOnThisFlight(cabinCrew_5);
+        assertEquals(5, flight_1.getNumberOfCabinCrew());
     }
 
 }
