@@ -41,4 +41,10 @@ public class PilotTest {
     public void pilotHasLicenseNumber() {
         assertEquals("BB674985X", pilot_1.getLicenseNumber());
     }
+
+    @Test
+    public void canChangeLicenseNumber() {
+        pilot_1.setLicenseNumber("ABC123");
+        assertEquals("ABC123", pilot_1.getLicenseNumber());
+    }
 }
