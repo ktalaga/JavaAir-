@@ -1,3 +1,5 @@
+package people;
+
 public class Pilot extends Person {
 
     private Rank rank;

@@ -1,5 +1,8 @@
+package peopleTests;
+
 import org.junit.Before;
 import org.junit.Test;
+import people.Passenger;
 
 import static org.junit.Assert.assertEquals;
 

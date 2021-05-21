@@ -1,4 +1,6 @@
-public class CabinCrew extends Person{
+package people;
+
+public class CabinCrew extends Person {
 
     private Rank rank;
 

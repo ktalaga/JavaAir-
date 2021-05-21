@@ -1,5 +1,9 @@
+package peopleTests;
+
 import org.junit.Before;
 import org.junit.Test;
+import people.Pilot;
+import people.Rank;
 
 import static org.junit.Assert.assertEquals;
 
