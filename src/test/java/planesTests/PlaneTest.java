@@ -1,5 +1,6 @@
 package planesTests;
 
+import aircrafts.Plane;
 import aircrafts.PlaneType;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,13 +16,13 @@ public class PlaneTest {
     @Before
     public void before(){
         plane_1 = new Plane(PlaneType.BOEING747);
-        plane_1 = new Plane(PlaneType.AIRBUSA320);
-        plane_1 = new Plane(PlaneType.DREAMLINER);
+        plane_2 = new Plane(PlaneType.AIRBUSA320);
+        plane_3 = new Plane(PlaneType.DREAMLINER);
     }
 
     @Test
     public void planeHasType(){
-        assertEquals(PlaneType.DREAMLINER, plane_3.getType());
+        assertEquals(PlaneType.DREAMLINER, plane_3.getPlaneType());
     }
 
 }
