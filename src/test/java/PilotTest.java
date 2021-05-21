@@ -31,4 +31,9 @@ public class PilotTest {
         assertEquals(Rank.FIRST_OFFICER, pilot_2.getRank());
     }
 
+    @Test
+    public void canChangePilotRank() {
+        pilot_2.setRank(Rank.CAPITAN);
+        assertEquals(Rank.CAPITAN, pilot_2.getRank());
+    }
 }
