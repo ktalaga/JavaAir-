@@ -191,6 +191,13 @@ public class FlightTest {
 
     @Test
     public void canCalculateWeightPerPersonReservedForAFlight() {
-        assertEquals(89.13, flight_1.calculatebagWeightReservedForEachPassengerForAFlight(),0.01);
+        assertEquals(89.13, flight_1.calculateBagWeightReservedForEachPassengerForAFlight(),0.01);
+    }
+
+    @Test
+    public void canCalculateHowMuchBaggageWeightIsBookedByPassengersOfAFlight() {
+        flight_1.addPassengerToFlight(passenger_1);
+        flight_1.addPassengerToFlight(passenger_2);
+        assertEquals(66, flight_1.getBaggageWeightReservedByPassengers());
     }
 }
