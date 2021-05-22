@@ -19,6 +19,7 @@ public class Flight {
     private String departureTime;
     private Pilot pilot;
     private int baggageWeight;
+    private double weightAllocatedForBags;
 
     public Flight(ArrayList<Pilot> pilots, ArrayList<CabinCrew> cabinCrew, Plane plane, String flightNumber, String destination, String departureAirport, String departureTime) {
         this.pilots = pilots;
@@ -30,6 +31,7 @@ public class Flight {
         this.departureAirport = departureAirport;
         this.departureTime = departureTime;
         this.baggageWeight = 22;
+        this.weightAllocatedForBags = plane.getPlaneWeight() * 0.5;
     }
 
     public int getNumberOfPilots() {
@@ -123,7 +125,6 @@ public class Flight {
     }
 
     public double calculateBagWeightReservedForEachPassengerForAFlight() {
-        double weightAllocatedForBags = plane.getPlaneWeight() * 0.5;
         return weightAllocatedForBags / plane.getPlaneCapacity();
     }
 
@@ -134,5 +135,9 @@ public class Flight {
             totalBaggageWeight += totalBaggageWeightPerPassenger;
         }
         return totalBaggageWeight;
+    }
+
+    public double getRemainingBaggageWeight() {
+        return weightAllocatedForBags - getBaggageWeightReservedByPassengers();
     }
 }

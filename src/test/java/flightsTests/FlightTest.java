@@ -200,4 +200,11 @@ public class FlightTest {
         flight_1.addPassengerToFlight(passenger_2);
         assertEquals(66, flight_1.getBaggageWeightReservedByPassengers());
     }
+
+    @Test
+    public void canCalculateHowMuchOverallWeightReservedForBaggageRemainsForAFlight() {
+        flight_1.addPassengerToFlight(passenger_1);
+        flight_1.addPassengerToFlight(passenger_2);
+        assertEquals(20434.00, flight_1.getRemainingBaggageWeight(),0.00);
+    }
 }
