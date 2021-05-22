@@ -189,4 +189,8 @@ public class FlightTest {
         assertEquals(1, flight_2.getPassengersCount());
     }
 
+    @Test
+    public void canCalculateWeightPerPersonReservedForAFlight() {
+        assertEquals(89.13, flight_1.calculatebagWeightReservedForEachPassengerForAFlight(),0.01);
+    }
 }

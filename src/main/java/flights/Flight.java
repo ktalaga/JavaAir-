@@ -119,4 +119,9 @@ public class Flight {
     public int getNumberOfAvailableSeats() {
         return plane.getPlaneCapacity() - this.getPassengersCount();
     }
+
+    public double calculatebagWeightReservedForEachPassengerForAFlight() {
+        double weightAllocatedForBags = plane.getPlaneWeight() * 0.5;
+        return weightAllocatedForBags / plane.getPlaneCapacity();
+    }
 }
